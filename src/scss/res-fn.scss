@@ -1,0 +1,31 @@
+@use "sass:math";
+
+@function rem($value){
+    @return #{math.div($value, 16)}rem;
+}
+
+@mixin scr-sm{
+    @media screen and (max-width:575.98px){
+        @content;
+    }
+}
+@mixin scr-md{
+    @media screen and (max-width:767.98px){
+        @content;
+    }
+}
+@mixin scr-lg{
+    @media screen and (max-width:991.98px){
+        @content;
+    }
+}
+@mixin scr-xl{
+    @media screen and (max-width:1199.98px){
+        @content;
+    }
+}
+@mixin scr-xxl{
+    @media screen and (max-width:1399.98px){
+        @content;
+    }
+}

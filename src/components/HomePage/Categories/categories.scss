@@ -1,0 +1,34 @@
+@use "../../../scss/" as *;
+
+.categories {
+  padding-top: rem(122);
+  padding-bottom: rem(122);
+
+  @include scr-md {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+  @include scr-sm {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+  }
+}
+
+.cat-card-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  @include scr-xl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(40);
+  }
+  @include scr-md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include scr-sm {
+    grid-template-columns: 1fr;
+  }
+}

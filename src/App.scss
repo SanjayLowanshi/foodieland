@@ -1,0 +1,134 @@
+@use "scss/" as *;
+
+// Reset
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: $ff-body;
+  font-weight: 400;
+  font-size: 16px;
+}
+.container{
+  padding: 0 rem(80);
+  @include scr-md {
+    padding : 0 rem(60);
+  }
+  @include scr-sm {
+    padding : 0 rem(30);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+img,
+picture {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (max-width: 576px) {
+  * {
+    transition-delay: 10ms !important;
+  }
+}
+
+// Removing animations for people who don't prefer to see them
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Global styles
+.btn {
+  padding: 20px 50px;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+}
+
+.btn-wht {
+  background-color: $clr-bg;
+  color: black;
+}
+h1,
+h2,
+h3 {
+  font-family: $ff-body;
+  font-weight: 600;
+}
+
+//typography
+h1 {
+  font-size: rem(64);
+  line-height: rem(78);
+  @include scr-md {
+    font-size: rem(48);
+    line-height: rem(58);
+  }
+  @include scr-sm {
+    font-size: rem(32);
+    line-height: rem(38);
+  }
+}
+h2 {
+  font-size: rem(48);
+  line-height: rem(58);
+  @include scr-md {
+    font-size: rem(32);
+    line-height: rem(38);
+  }
+  @include scr-sm {
+    font-size: rem(24);
+    line-height: rem(28);
+  }
+}
+h3 {
+  font-size: rem(24);
+  line-height: rem(32);
+  @include scr-md {
+    font-size: rem(16);
+    line-height: rem(20);
+  }
+}

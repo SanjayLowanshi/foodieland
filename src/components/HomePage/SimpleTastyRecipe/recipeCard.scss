@@ -1,0 +1,62 @@
+@use "../../../scss/" as *;
+
+.recipe-card {
+  position: relative;
+  padding: rem(16) rem(16) rem(35) rem(16);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(231, 249, 253, 0) 50%,
+    $clr-bg
+  );
+  border-radius: rem(30);
+}
+
+.heart {
+  cursor: pointer;
+  position: absolute;
+  top: rem(30);
+  right: rem(30);
+  user-select: none;
+}
+
+.recipe__img {
+  width: 100%;
+  border-radius: rem(30);
+  margin-bottom: rem(20);
+}
+
+.recipe__title {
+  padding-left: rem(10);
+  letter-spacing: -0.04em;
+  margin-bottom: rem(20);
+}
+
+.recipe__info {
+  font-weight: 500;
+  font-size: rem(14);
+  line-height: rem(17);
+  color: $clr-para;
+  letter-spacing: -0.02em;
+  padding-left: rem(10);
+  svg {
+    fill: $clr-head;
+    height: rem(14);
+    margin-right: rem(10);
+  }
+  span {
+    margin-right: rem(30);
+  }
+}
+
+.ads-card {
+  display: block;
+  position: relative;
+  img {
+    display: block;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  *:not(img) {
+    display: none;
+  }
+}

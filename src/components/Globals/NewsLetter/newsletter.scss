@@ -1,0 +1,85 @@
+@use "../../../scss/" as *;
+
+.newsletter{
+  padding: rem(80) 0;
+}
+
+.nl-container {
+  background-color: $clr-bg;
+  padding: rem(80) 0;
+  border-radius: rem(60);
+  text-align: center;
+  position: relative;
+  @include scr-md {
+    padding-inline: rem(10);
+    max-width: 100%;
+    width: 100%;
+    margin-inline: 0;
+  }
+  form {
+    margin-top: rem(65);
+    margin-inline: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-inline: rem(10);
+    border-radius: rem(24);
+    min-width: rem(480);
+    @include scr-sm {
+      min-width: rem(280);
+      padding: 0;
+      flex-direction: column;
+      background-color: transparent;
+      gap: rem(10);
+    }
+    input[type="text"] {
+      padding: rem(32);
+      border: none;
+      flex-grow: 3;
+      @include scr-sm {
+        padding: rem(20);
+        border-radius: rem(10);
+      }
+    }
+    input[type="submit"] {
+      padding: rem(20) rem(50);
+      border-radius: rem(16);
+      background: #000000;
+      color: white;
+      border: none;
+      flex-grow: 1;
+    }
+  }
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    width: 25%;
+    height: 60%;
+    background-image: url("../../../assets/images/sub-bg-2.png");
+    border-radius: 0 0 rem(60) 0;
+    background-size: cover;
+    @include scr-lg {
+      display: none;
+    }
+  }
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 30%;
+    height: 80%;
+    background-image: url("../../../assets/images/sub-bg-1.png");
+    background-size: cover;
+    border-radius: 0 0 0 rem(60);
+    @include scr-xl {
+      width: 20%;
+    }
+    @include scr-lg {
+      display: none;
+    }
+  }
+}

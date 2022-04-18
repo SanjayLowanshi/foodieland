@@ -1,0 +1,39 @@
+@use "../../../scss/" as *;
+
+.instagram {
+  padding: rem(80) 0;
+  background-image: linear-gradient(
+    180deg,
+    rgba(231, 249, 253, 0) 0%,
+    $clr-bg 100%
+  );
+}
+
+.insta-container {
+  text-align: center;
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(17);
+  }
+}
+
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: rem(40);
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+  @include scr-md {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: rem(20);
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+  }
+  @include scr-sm {
+    grid-template-columns: 1fr;
+    grid-gap: rem(20);
+  }
+}
+
+

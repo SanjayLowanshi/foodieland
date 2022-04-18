@@ -1,0 +1,91 @@
+@use "../../../scss/" as *;
+
+.chef-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  justify-content: center;
+  gap: rem(45);
+  @include scr-lg {
+    gap: rem(20);
+  }
+  @include scr-md {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chef-header {
+  text-align: left;
+  .CH-title {
+    text-align: left;
+    @include scr-md {
+      text-align: center;
+    }
+  }
+  .CH-text {
+    text-align: left;
+    @include scr-md {
+      text-align: center;
+    }
+  }
+  @include scr-md {
+    text-align: center;
+  }
+}
+
+.chef-text {
+  text-align: left;
+  .btn {
+    display: inline-block;
+    margin-top: rem(70);
+    @include scr-md {
+      margin-top: rem(20);
+    }
+  }
+  @include scr-md {
+    text-align: center;
+  }
+}
+
+.chef-img {
+  text-align: center;
+  position: relative;
+}
+
+.chef-img-wrapper {
+  position: relative;
+  .chef__img {
+    width: 100%;
+    margin-bottom: rem(-10);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(231, 249, 253, 0) 0%,
+      #e7f9fd 100%
+    );
+    border-radius: rem(30);
+    z-index: -2;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    right: 0;
+    top: 10%;
+    background-image: url("../../../assets/images/kitchen/kitchen-bg.svg");
+    background-repeat: no-repeat;
+    border-radius: rem(30);
+    z-index: -1;
+    @include scr-md {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@use "../../../scss/" as *;
+
+.try-this {
+  padding: rem(80) 0;
+}
+
+.try-this-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  .CH-title {
+    max-width: rem(520);
+  }
+  .CH-text {
+    max-width: rem(620);
+    margin-right: 0;
+  }
+  @include scr-xl {
+    flex-direction: column;
+    text-align: center;
+    .CH-text {
+      margin: auto;
+    }
+  }
+}
+
+.try-this-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: rem(40);
+  margin-top: rem(80);
+  .more-card {
+    padding: 0;
+    background-image: none;
+    .heart {
+      top: rem(10);
+      right: rem(10);
+    }
+    .CH__title {
+      font-weight: 600;
+      font-size: rem(18);
+      line-height: rem(26);
+    }
+  }
+  @include scr-xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include scr-md {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(25);
+  }
+  @include scr-sm {
+    grid-template-columns: 1fr;
+    gap: rem(40);
+  }
+}

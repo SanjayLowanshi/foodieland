@@ -1,0 +1,17 @@
+@use "../../../scss/" as *;
+
+.CH-header {
+  text-align: center;
+}
+
+.CH-title {
+  letter-spacing: -0.04em;
+  margin-bottom: rem(25);
+}
+
+.CH-text {
+  line-height: 28px;
+  color: $clr-para;
+  max-width: 700px;
+  margin: 0 auto;
+}

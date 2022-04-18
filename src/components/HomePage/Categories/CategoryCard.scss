@@ -1,0 +1,77 @@
+@use "../../../scss/" as *;
+
+.cat-card {
+  background-image: linear-gradient(to top, $clr-bg, rgba(0, 0, 0, 0) 50%);
+  padding: rem(30) rem(40);
+  border-radius: rem(30);
+  &:first-child {
+    background-image: linear-gradient(
+      180deg,
+      rgba(112, 130, 70, 0) 0%,
+      rgba(112, 130, 70, 0.1) 100%
+    );
+  }
+  &:nth-child(2) {
+    background-image: linear-gradient(
+      180deg,
+      rgba(108, 198, 63, 0) 0%,
+      rgba(108, 198, 63, 0.1) 100%
+    );
+    .cat-card__img {
+      filter: drop-shadow(10px 10px 5px rgba(0, 171, 68, 0.2));
+    }
+  }
+  &:nth-child(3) {
+    background-image: linear-gradient(
+      180deg,
+      rgba(204, 38, 27, 0) 0%,
+      rgba(204, 38, 27, 0.1) 100%
+    );
+    .cat-card__img {
+      filter: drop-shadow(10px 10px 5px rgba(255, 11, 11, 0.2));
+    }
+  }
+  &:nth-child(4) {
+    background-image: linear-gradient(
+      180deg,
+      rgba(240, 158, 0, 0) 0%,
+      rgba(240, 158, 0, 0.1) 100%
+    );
+    .cat-card__img {
+      filter: drop-shadow(10px 10px 5px rgba(255, 175, 4, 0.2));
+    }
+  }
+  &:nth-child(5) {
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.05) 100%
+    );
+    .cat-card__img {
+      filter: drop-shadow(10px 10px 5px rgba(255, 175, 4, 0.2));
+    }
+  }
+  &:nth-child(6) {
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.05) 100%
+    );
+    .cat-card__img {
+      filter: drop-shadow(10px 10px 5px rgba(255, 29, 4, 0.2));
+    }
+  }
+  @include scr-lg {
+    padding: rem(20);
+  }
+}
+
+.cat-card__img {
+  margin-bottom: rem(50);
+}
+
+.cat__title {
+  font-weight: 600;
+  font-size: rem(18);
+  line-height: rem(22);
+}

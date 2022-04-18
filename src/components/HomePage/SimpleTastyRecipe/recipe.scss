@@ -1,0 +1,24 @@
+@use "../../../scss/" as *;
+
+.recipe-section{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.recipe-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(40);
+  margin-top: rem(100);
+  @include scr-xl {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include scr-lg {
+    gap: rem(30);
+    margin-top: rem(50);
+  }
+  @include scr-sm {
+    grid-template-columns: 1fr;
+    margin-top: rem(40);
+  }
+}
